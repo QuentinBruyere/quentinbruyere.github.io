@@ -1,0 +1,237 @@
+body {
+    background-image: url("../imgs/minimalist-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-family: Raleway, sans-serif;
+    font-weight: 500;
+
+    .profile-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        .profile-card {
+            $parallax1: 25px;
+
+            display: flex;
+            flex-flow: column nowrap;
+            padding: 2rem;
+            position: relative;
+
+            border: 1px solid rgba(187, 187, 187, 0.2);
+            border-radius: 12px;
+            background-color: rgba(168, 168, 168, .15);
+
+            text-align: center;
+
+            transform-style: preserve-3d;
+            perspective: 1000px;
+
+            &:after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                border-radius: 12px;
+                backdrop-filter: blur(15px);
+                box-shadow: 0 20px 70px -10px rgb(51 51 51 / 30%);
+
+                z-index: -1;
+            }
+
+            .top-card {
+                margin-bottom: 2rem;
+
+                transform: translateZ($parallax1);
+
+                img {
+                    width: 175px;
+                    border-radius: 50%;
+                    margin-top: .5rem;
+                }
+                .name {
+                    margin: 2rem 0;
+                    font-weight: 400;
+                    font-size: 2.5rem;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+                .job {
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                }
+
+                .place{
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 20px;
+                        margin: 3px;
+                    }
+                    .place-text {
+                        font-weight: 300;
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+            .languages {
+
+                transform: translateZ($parallax1);
+
+                border-radius: 12px;
+                padding: 1rem;
+                background-color: rgba(255, 255, 255, .1);
+                // backdrop-filter: blur(10px); break the tilt effect
+                box-shadow: 1px 1px 20px 0px rgb(0 0 0 / 10%);
+                margin-bottom: 2rem;
+
+                h3 {
+                    font-size: 1.15rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                }
+
+                div {
+                    margin-bottom: 1rem;
+
+                    h4 {
+                        margin-bottom: .5rem;
+                    }
+                    p {
+                        margin: 0 auto;
+                        max-width: 300px;
+                        font-size: .9rem;
+                    }
+                }
+            }
+
+            .social {
+                
+                display: flex;
+                justify-content: space-around;
+
+                transform: translateZ($parallax1);
+
+                margin-bottom: 1rem;
+
+                // Shiny effect on after which hide anchor's links
+
+                // button {
+                //     background-color: rgba(0, 0, 0, 0);
+                //     border: none;
+                //     border-radius: 12px;
+                //     position: relative;
+                //     padding: 5px;
+                //     margin: 0 .5rem;
+
+                //     img {
+                //         width: 50px;
+                //     }
+
+                //     // &:after {
+                //     //     content: "";
+                //     //     position: absolute;
+                //     //     top: 0;
+                //     //     left: 0;
+                //     //     height: 100%;
+                //     //     width: 100%;
+                //     //     border-radius: 12px;
+                        
+                //     //     background: linear-gradient(
+                //     //         45deg,
+                //     //         red,
+                //     //         blue,
+                //     //         transparent 68%
+                //     //     );
+
+                //     //     // background: linear-gradient(
+                //     //     //     45deg,
+                //     //     //     transparent 50%,
+                //     //     //     rgba(255,255,255,0.3) 58%,
+                //     //     //     rgba(255,255,255,0.6) 67%,
+                //     //     //     transparent 68%
+                //     //     // );
+
+                //     //     background-size: 400% 100%;
+                //     //     background-position: 165% 0;
+                //     //     transition: .8s;
+                //     // }
+
+                //     &:hover{
+                //         cursor: pointer;
+
+                //         &:after {
+                //             background-position: -20% 0;
+                //         }
+                //     }
+                // }
+
+                a {
+                    background-color: rgba(0, 0, 0, 0);
+                    border: none;
+                    border-radius: 12px;
+                    position: relative;
+                    padding: 5px;
+                    margin: 0 .5rem;
+
+                    img {
+                        width: 50px;
+                    }
+                }
+
+                $opacity: .6;
+
+                .linkedin {
+                    background-color: rgba(10, 102, 194, $opacity);
+
+                    img {
+                        transform: scale(0.85) translateY(2.5px);
+                    }
+                }
+
+                .github {
+                    background-color: rgba(36, 41, 47, $opacity);
+
+                    img {
+                        transform: scale(0.8);
+                    }
+                }
+
+                .cv {
+                    background-color: rgba(153, 24, 131, $opacity);
+
+                    img {
+                        transform: scale(0.85);
+                    }
+                }
+
+                .mail {
+                    background-color: rgba(72, 201, 100, $opacity);
+
+                    img {
+                        transform: scale(0.8);
+                    }
+                }
+            }
+        }
+    }
+
+    noscript {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-weight: bold;
+        color: rgb(223, 59, 59);
+    }
+}

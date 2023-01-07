@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../imgs/minimalist-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Raleway, sans-serif;
+  font-weight: 500;
+}
+body .profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body .profile-page .profile-card {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2rem;
+  position: relative;
+  border: 1px solid rgba(187, 187, 187, 0.2);
+  border-radius: 12px;
+  background-color: rgba(168, 168, 168, 0.15);
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+body .profile-page .profile-card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.3);
+  z-index: -1;
+}
+body .profile-page .profile-card .top-card {
+  margin-bottom: 2rem;
+  transform: translateZ(25px);
+}
+body .profile-page .profile-card .top-card img {
+  width: 175px;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+body .profile-page .profile-card .top-card .name {
+  margin: 2rem 0;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+body .profile-page .profile-card .top-card .name span {
+  font-weight: 600;
+}
+body .profile-page .profile-card .top-card .job {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+body .profile-page .profile-card .top-card .place {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body .profile-page .profile-card .top-card .place img {
+  width: 20px;
+  margin: 3px;
+}
+body .profile-page .profile-card .top-card .place .place-text {
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+body .profile-page .profile-card .languages {
+  transform: translateZ(25px);
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+body .profile-page .profile-card .languages h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+body .profile-page .profile-card .languages div {
+  margin-bottom: 1rem;
+}
+body .profile-page .profile-card .languages div h4 {
+  margin-bottom: 0.5rem;
+}
+body .profile-page .profile-card .languages div p {
+  margin: 0 auto;
+  max-width: 300px;
+  font-size: 0.9rem;
+}
+body .profile-page .profile-card .social {
+  display: flex;
+  justify-content: space-around;
+  transform: translateZ(25px);
+  margin-bottom: 1rem;
+}
+body .profile-page .profile-card .social a {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 12px;
+  position: relative;
+  padding: 5px;
+  margin: 0 0.5rem;
+}
+body .profile-page .profile-card .social a img {
+  width: 50px;
+}
+body .profile-page .profile-card .social .linkedin {
+  background-color: rgba(10, 102, 194, 0.6);
+}
+body .profile-page .profile-card .social .linkedin img {
+  transform: scale(0.85) translateY(2.5px);
+}
+body .profile-page .profile-card .social .github {
+  background-color: rgba(36, 41, 47, 0.6);
+}
+body .profile-page .profile-card .social .github img {
+  transform: scale(0.8);
+}
+body .profile-page .profile-card .social .cv {
+  background-color: rgba(153, 24, 131, 0.6);
+}
+body .profile-page .profile-card .social .cv img {
+  transform: scale(0.85);
+}
+body .profile-page .profile-card .social .mail {
+  background-color: rgba(72, 201, 100, 0.6);
+}
+body .profile-page .profile-card .social .mail img {
+  transform: scale(0.8);
+}
+body noscript {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  color: rgb(223, 59, 59);
+}
+
+/*# sourceMappingURL=style.css.map */
