@@ -49,6 +49,16 @@
     
     <noscript>Javascript is needed for tilt effect</noscript>
     <script type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>
+    <script>
+        function getAccel(){
+            DeviceMotionEvent.requestPermission().then(response => {
+                if (response == 'granted') {
+                    console.log("accelerometer permission granted");
+                    // Do stuff here
+                }
+            });
+        }
+    </script>
     <!-- <script src="assets/js/homemade-tilt.js" type="text/javascript"></script> -->
 </body>
 </html>
