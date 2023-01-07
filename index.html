@@ -50,15 +50,10 @@
     <noscript>Javascript is needed for tilt effect</noscript>
     <script>
         function getAccel(){
-            DeviceMotionEvent.requestPermission().then(response => {
-                if (response == 'granted') {
-                    import('assets/js/vanilla-tilt.min.js');
-                }
-            });
+            DeviceMotionEvent.requestPermission();
         }
-        getAccel();
     </script>
-    <!-- <script type="module" src="assets/js/vanilla-tilt.min.js"></script> -->
+    <script type="module" src="assets/js/vanilla-tilt.min.js"></script>
     
     <!-- <script src="assets/js/homemade-tilt.js" type="text/javascript"></script> -->
 </body>
