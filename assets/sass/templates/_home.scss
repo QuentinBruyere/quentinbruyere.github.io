@@ -12,8 +12,10 @@ body {
         align-items: center;
         height: 100vh;
 
+        color: #101011;
+
         .profile-card {
-            $parallax1: 25px;
+            $parallax1: 27px;
 
             display: flex;
             flex-flow: column nowrap;
@@ -87,7 +89,7 @@ body {
             }
             .languages {
 
-                transform: translateZ($parallax1);
+                transform: translateZ($parallax1 + 5);
 
                 border-radius: 12px;
                 padding: 1rem;
@@ -190,7 +192,7 @@ body {
                     }
                 }
 
-                $opacity: .6;
+                $opacity: .7;
 
                 .linkedin {
                     background-color: rgba(10, 102, 194, $opacity);
@@ -209,15 +211,17 @@ body {
                 }
 
                 .cv {
-                    background-color: rgba(153, 24, 131, $opacity);
-
+                    // background-color: rgba(153, 24, 131, $opacity);
+                    background-color: rgba(241, 159, 109, $opacity);
+                    
                     img {
-                        transform: scale(0.85);
+                        transform: scale(0.8);
                     }
                 }
 
                 .mail {
-                    background-color: rgba(72, 201, 100, $opacity);
+                    // background-color: rgba(72, 201, 100, $opacity);
+                    background-color: rgba(133, 180, 230, $opacity);
 
                     img {
                         transform: scale(0.8);

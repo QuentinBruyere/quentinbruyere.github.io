@@ -17,6 +17,7 @@ body .profile-page {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: #101011;
 }
 body .profile-page .profile-card {
   display: flex;
@@ -44,7 +45,7 @@ body .profile-page .profile-card:after {
 }
 body .profile-page .profile-card .top-card {
   margin-bottom: 2rem;
-  transform: translateZ(25px);
+  transform: translateZ(27px);
 }
 body .profile-page .profile-card .top-card img {
   width: 175px;
@@ -79,7 +80,7 @@ body .profile-page .profile-card .top-card .place .place-text {
   font-size: 0.85rem;
 }
 body .profile-page .profile-card .languages {
-  transform: translateZ(25px);
+  transform: translateZ(32px);
   border-radius: 12px;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.1);
@@ -105,7 +106,7 @@ body .profile-page .profile-card .languages div p {
 body .profile-page .profile-card .social {
   display: flex;
   justify-content: space-around;
-  transform: translateZ(25px);
+  transform: translateZ(27px);
   margin-bottom: 1rem;
 }
 body .profile-page .profile-card .social a {
@@ -120,25 +121,25 @@ body .profile-page .profile-card .social a img {
   width: 50px;
 }
 body .profile-page .profile-card .social .linkedin {
-  background-color: rgba(10, 102, 194, 0.6);
+  background-color: rgba(10, 102, 194, 0.7);
 }
 body .profile-page .profile-card .social .linkedin img {
   transform: scale(0.85) translateY(2.5px);
 }
 body .profile-page .profile-card .social .github {
-  background-color: rgba(36, 41, 47, 0.6);
+  background-color: rgba(36, 41, 47, 0.7);
 }
 body .profile-page .profile-card .social .github img {
   transform: scale(0.8);
 }
 body .profile-page .profile-card .social .cv {
-  background-color: rgba(153, 24, 131, 0.6);
+  background-color: rgba(241, 159, 109, 0.7);
 }
 body .profile-page .profile-card .social .cv img {
-  transform: scale(0.85);
+  transform: scale(0.8);
 }
 body .profile-page .profile-card .social .mail {
-  background-color: rgba(72, 201, 100, 0.6);
+  background-color: rgba(133, 180, 230, 0.7);
 }
 body .profile-page .profile-card .social .mail img {
   transform: scale(0.8);
