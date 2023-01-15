@@ -159,6 +159,7 @@ body noscript {
 @media (max-width: 425px) {
   html {
     height: -webkit-fill-available;
+    max-height: 100vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;

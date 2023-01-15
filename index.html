@@ -9,7 +9,8 @@
 </head>
 <body>
     <div class="profile-page">
-        <div class="profile-card" data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare=".3">
+        <!-- <div class="profile-card" data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare=".3"> -->
+        <div class="profile-card">
             <!-- <button id="accelPermsButton" onclick="getAccel()" style="height:50px;">Tilt</button> -->
             <!-- <div id="accelPermsButton">
                 <input type="checkbox">
@@ -21,7 +22,7 @@
 
             <div class="tiltButton">
                 <label class="cont">
-                    <input type="checkbox" class="tiltCheckbox" onclick="setGyro()">
+                    <input type="checkbox" class="tiltCheckbox">
                     <div class="switch"></div>
                 </label>
                 <p class="tiltLabel">Tilt</p>
@@ -64,44 +65,51 @@
         </div>
     </div>
     
-    <script type="module" src="assets/js/vanilla-tilt.min.js"></script>    
-    <script>
-        // BUTTON NEEDED TO ACCESS ON MOBILE
-        let tiltButton = document.querySelector(".tiltButton");
-        let tiltCheckbox = document.querySelector(".tiltCheckbox");
-        let profilCard = document.querySelector(".profile-card");
-        let topCard = document.querySelector(".top-card");
-        let languages = document.querySelector(".languages");
-        let social = document.querySelector(".social");
+    <script type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>    
+    <script type="text/javascript">
+        addEventListener('DOMContentLoaded', (event) => {
 
-        var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            // BUTTON NEEDED TO ACCESS ON MOBILE
+            let tiltButton = document.querySelector(".tiltButton");
+            let tiltCheckbox = document.querySelector(".tiltCheckbox");
+            let profilCard = document.querySelector(".profile-card");
+            let topCard = document.querySelector(".top-card");
+            let languages = document.querySelector(".languages");
+            let social = document.querySelector(".social");
 
-        console.log(isIOS);
+            var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-            // true for mobile device
-            profilCard.setAttribute("data-tilt-perspective", "200");
-            tiltButton.style.setProperty("transform", "translateZ(18px)");
-            topCard.style.setProperty("transform", "translateZ(13px)");
-            languages.style.setProperty("transform", "translateZ(18px)");
-            social.style.setProperty("transform", "translateZ(13px)");
-        }
+            tiltCheckbox.addEventListener("click", setGyro);
 
-        if(!isIOS){
-            tiltButton.style.display = "none";
-            profilCard.VanillaTilt.destroy();
-        }
+            console.log(isIOS);
 
-        function setGyro(){
-            if(tiltCheckbox.checked){
-                // profilCard.setAttribute("data-tilt-gyroscope", "true");
-                DeviceMotionEvent.requestPermission();
-                VanillaTilt.init(profilCard);
-            }else{
-                profilCard.VanillaTilt.destroy();
+            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+                // true for mobile device
+                profilCard.setAttribute("data-tilt-perspective", "200");
+                tiltButton.style.setProperty("transform", "translateZ(18px)");
+                topCard.style.setProperty("transform", "translateZ(13px)");
+                languages.style.setProperty("transform", "translateZ(18px)");
+                social.style.setProperty("transform", "translateZ(13px)");
             }
-        }
-        
+
+            // if(!isIOS){
+            //     tiltButton.style.display = "none";
+            //     profilCard.VanillaTilt.destroy();
+            // }
+
+            function setGyro(){
+                if(tiltCheckbox.checked){
+                    // profilCard.setAttribute("data-tilt-gyroscope", "true");
+                    DeviceMotionEvent.requestPermission;
+                    VanillaTilt.init(profilCard);
+                    console.log("checkbox checked");
+                }
+                if(!tiltCheckbox.checked){
+                    profilCard.vanillaTilt.destroy();
+                    console.log("should destroy");
+                }
+            }
+        });
         
     </script>
 
