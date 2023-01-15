@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="profile-page">
-        <!-- <button id="accelPermsButton" onclick="getAccel()" style="height:50px;">Get Accelerometer Permissions</button> -->
         <div class="profile-card" data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare=".3" data-tilt-gyroscope="true">
+            <button id="accelPermsButton" onclick="getAccel()" style="height:50px;">Tilt</button>
             <div class="top-card">
                 <img src="assets/imgs/profile-pic.png" alt="Photo de profil">
                 <h2 class="name">Quentin <span>Bruyère</span></h2>
@@ -49,12 +49,12 @@
     </div>
     
     <noscript>Javascript is needed for tilt effect</noscript>
-    <!-- <script>
-        BUTTON NEEDED TO ACCESS ON MOBILE
+    <script>
+        // BUTTON NEEDED TO ACCESS ON MOBILE
         function getAccel(){
             DeviceMotionEvent.requestPermission();
         }
-    </script> -->
+    </script>
     <script type="module" src="assets/js/vanilla-tilt.min.js"></script>
     
     <!-- <script src="assets/js/homemade-tilt.js" type="text/javascript"></script> -->

@@ -44,6 +44,9 @@ body .profile-page .profile-card:after {
   box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.3);
   z-index: -1;
 }
+body .profile-page .profile-card #accelPermsButton {
+  visibility: hidden;
+}
 body .profile-page .profile-card .top-card {
   margin-bottom: 2rem;
   transform: translateZ(27px);
@@ -170,6 +173,13 @@ body noscript {
   }
   html body .profile-page .profile-card {
     padding: 2rem;
+  }
+  html body .profile-page .profile-card #accelPermsButton {
+    visibility: visible;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 50px;
   }
   html body .profile-page .profile-card .top-card {
     margin-bottom: 1.65rem;

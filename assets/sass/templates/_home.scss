@@ -47,6 +47,10 @@ body {
                 z-index: -1;
             }
 
+            #accelPermsButton {
+                visibility: hidden;
+            }
+
             .top-card {
                 margin-bottom: 2rem;
 
@@ -321,6 +325,14 @@ body {
                     $parallax1: 27px;
 
                     padding: 2rem;
+
+                    #accelPermsButton {
+                        visibility: visible;
+                        position: absolute;
+                        top: 70px;
+                        right: 10px;
+                        width: 50px;
+                    }
 
                     .top-card {
                         margin-bottom: 1.65rem;
