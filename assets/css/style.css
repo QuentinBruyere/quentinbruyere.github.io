@@ -156,12 +156,14 @@ body noscript {
 @media (max-width: 425px) {
   html {
     height: -webkit-fill-available;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
   }
   html body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    margin: auto 0;
   }
   html body .profile-page {
     height: 100%;
