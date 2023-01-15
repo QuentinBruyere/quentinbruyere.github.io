@@ -10,7 +10,23 @@
 <body>
     <div class="profile-page">
         <div class="profile-card" data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare=".3" data-tilt-gyroscope="true">
-            <button id="accelPermsButton" onclick="getAccel()" style="height:50px;">Tilt</button>
+            <!-- <button id="accelPermsButton" onclick="getAccel()" style="height:50px;">Tilt</button> -->
+            <!-- <div id="accelPermsButton">
+                <input type="checkbox">
+                <div class="switch"></div>
+            </div> -->
+            <!-- <input type="checkbox" id="accelPermsButton">
+                <div class="switch"></div>
+            </input> -->
+
+            <div class="tiltButton">
+                <label class="cont">
+                    <input type="checkbox" onclick="getAccel()">
+                    <div class="switch"></div>
+                </label>
+                <p class="tiltLabel">Tilt</p>
+            </div>
+
             <div class="top-card">
                 <img src="assets/imgs/profile-pic.png" alt="Photo de profil">
                 <h2 class="name">Quentin <span>Bruyère</span></h2>

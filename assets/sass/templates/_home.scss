@@ -326,12 +326,132 @@ body {
 
                     padding: 2rem;
 
-                    #accelPermsButton {
-                        visibility: visible;
+                    // #accelPermsButton {
+
+                    //     transform: translateZ($parallax1 + 5);
+
+                    //     $button-width: 50px;
+                    //     $button-height: $button-width/2;
+                    //     visibility: visible;
+                    //     position: absolute;
+                    //     top: 70px;
+                    //     right: 20px;
+
+                    //     width: $button-width;
+                    //     height: $button-height;
+                    //     border-radius: 25px;
+                    //     background-color: rgba(0, 0, 0, 0);
+                    //     overflow: hidden;
+
+                    //     // transition: .3s;
+
+                    //     input {
+                    //     //     // display: none;
+                    //     //     width: 50px;
+
+                    //         &:checked ~ .switch {
+                                 
+                    //                 // // background-color: rgba(9, 255, 0, 0.13);
+                    //                 // #accelPermsButton{
+                    //                 //     background-color: red;
+                    //                 // } 
+                    //                 background-color: red;
+                                
+                    //         }
+                    //     }
+
+                    //     .switch {
+                    //         $switch-diameter: $button-height*.85;
+
+                    //         width: $switch-diameter;
+                    //         height: $switch-diameter;
+
+                    //         position: absolute;
+                    //         top: calc(($button-height - $switch-diameter)/2);
+                    //         left: calc(($button-width - ($switch-diameter*2))/2);
+
+                    //         background-color: rgba(0, 0, 0, 0);
+                    //         border-radius: 50%;
+                    //         box-shadow: -2px 1px 20px 7px rgb(0 0 0 / 25%)
+
+                    //         // &::before {
+                    //         //     position: absolute;
+                    //         //     top: 0;
+                    //         //     left: 0;
+                    //         //     width: 100%;
+                    //         //     height: 100%;
+                    //         //     background-color: #fff;
+                    //         //     border-radius: 25px;
+                    //         //     // z-index: -1;
+                    //         // }
+                    //     }
+
+                    // }
+                    .tiltButton {
+
                         position: absolute;
                         top: 70px;
-                        right: 10px;
-                        width: 50px;
+                        right: 20px;
+                        transform: translate3d(-50%, -50%, $parallax1 + 5);
+
+                        text-align: center;
+
+                        .cont {
+                            position: relative;
+                            display: block;
+                            width: 51px;
+                            height: 31px;
+                            border-radius: 16px;
+                            padding: 2px;
+                            cursor: pointer;
+                            overflow: hidden;
+                            transition: .3s;
+    
+    
+                            input {
+                                display: none;
+    
+                                &:checked ~ .switch {
+                                    margin-left: calc(100% - 27px);
+                                    background: rgba(255, 255, 255, 1);
+    
+                                    &:before {
+                                        background: #3eff6e67;
+                                    }
+                                }
+                            }
+    
+                            .switch {
+                                display: block;
+                                width: 27px;
+                                height: 27px;
+                                background: rgba(255, 255, 255, 0.25);
+                                border-radius: 50%;
+                                box-shadow: 0 3px 8px rgba(255, 255, 255, 0.15);
+                                transition: inherit;
+    
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: rgba(255, 255, 255, 0.15);
+                                    z-index: -1;
+                                    transition: inherit;
+                                }
+                            }
+                        }
+    
+                        .tiltLabel {
+                            position: absolute;
+                            top: 110%;
+                            left: 0;
+                            width: 100%;
+                            color: rgba(240, 240, 240, 0.5);
+                            font-size: 1rem;
+                        }
                     }
 
                     .top-card {
