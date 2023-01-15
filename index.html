@@ -75,6 +75,11 @@
 
         console.log(isIOS);
 
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            // true for mobile device
+            profilCard.setAttribute("data-tilt-perspective", "200");
+        }
+
         if(!isIOS){
             tiltButton.style.display = "none";
         }
