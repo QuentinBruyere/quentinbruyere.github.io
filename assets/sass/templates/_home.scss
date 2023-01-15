@@ -304,7 +304,7 @@ body {
 
 @media (max-width: 425px){
     html {
-        height: webkit-fill-available;
+        height: -webkit-fill-available;
 
         body {
             background-size: cover;

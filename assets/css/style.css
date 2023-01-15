@@ -154,7 +154,7 @@ body noscript {
 
 @media (max-width: 425px) {
   html {
-    height: webkit-fill-available;
+    height: -webkit-fill-available;
   }
   html body {
     background-size: cover;
