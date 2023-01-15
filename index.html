@@ -100,9 +100,11 @@
             function setGyro(){
                 if(tiltCheckbox.checked){
                     // profilCard.setAttribute("data-tilt-gyroscope", "true");
-                    DeviceMotionEvent.requestPermission;
                     VanillaTilt.init(profilCard);
                     console.log("checkbox checked");
+                    if(isIOS){
+                        DeviceMotionEvent.requestPermission();
+                    }
                 }
                 if(!tiltCheckbox.checked){
                     profilCard.vanillaTilt.destroy();
