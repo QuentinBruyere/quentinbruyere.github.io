@@ -161,6 +161,7 @@ body noscript {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
+    margin: auto 0;
   }
   html body .profile-page {
     height: 100%;
