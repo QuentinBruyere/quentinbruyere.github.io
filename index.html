@@ -67,8 +67,17 @@
     <noscript>Javascript is needed for tilt effect</noscript>
     <script>
         // BUTTON NEEDED TO ACCESS ON MOBILE
+        let tiltButton = document.querySelector(".tiltButton");
         let tiltCheckbox = document.querySelector(".tiltCheckbox");
         let profilCard = document.querySelector(".profile-card");
+
+        var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+        console.log(isIOS);
+
+        if(!isIOS){
+            tiltButton.style.display = "none";
+        }
 
         function setGyro(){
             if(tiltCheckbox.checked){

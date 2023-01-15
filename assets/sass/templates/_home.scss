@@ -47,8 +47,8 @@ body {
                 z-index: -1;
             }
 
-            #accelPermsButton {
-                visibility: hidden;
+            .tiltButton {
+                display: none;
             }
 
             .top-card {
@@ -245,68 +245,6 @@ body {
     }
 }
 
-// @media (max-width: 425px){
-//     body{
-//         .profile-page {
-//             .profile-card {
-//                 padding: 2rem;
-//                 .top-card {
-//                     img {
-//                         width: 125px;
-//                     }
-//                     .name {
-//                         font-size: 1.5rem;
-//                     }
-//                     .job {
-//                         font-size: .7rem;
-//                     }
-//                     .place {
-//                         .place-text {
-//                             font-size: .5rem;
-//                         }
-//                     }
-//                 }
-//                 .languages {
-//                     h3 {
-//                         font-size: 1rem;
-//                         max-width: 200px;
-//                         margin: 0 auto;
-//                         margin-bottom: 1rem;
-//                     }
-//                     div {
-//                         h4 {
-//                             font-size: .75rem;
-//                         }
-//                         p {
-//                             font-size: .75rem;
-//                         }
-//                     }
-//                 }
-//                 .social {
-//                     a {
-//                         img {
-//                             width: 25px;
-//                         }
-//                     }
-//                     .linkedin {
-
-//                     }
-//                     .github {
-
-//                     }
-//                     .cv {
-
-//                     }
-//                     .mail {
-
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-
 @media (max-width: 425px){
     html {
         height: -webkit-fill-available;
@@ -318,76 +256,19 @@ body {
             background-size: cover;
             background-repeat: no-repeat;
             height: 100%;
+            background-position: 50% 0;
+
 
             .profile-page {
                 height: 100%;
+
                 .profile-card {
                     $parallax1: 27px;
 
                     padding: 2rem;
 
-                    // #accelPermsButton {
-
-                    //     transform: translateZ($parallax1 + 5);
-
-                    //     $button-width: 50px;
-                    //     $button-height: $button-width/2;
-                    //     visibility: visible;
-                    //     position: absolute;
-                    //     top: 70px;
-                    //     right: 20px;
-
-                    //     width: $button-width;
-                    //     height: $button-height;
-                    //     border-radius: 25px;
-                    //     background-color: rgba(0, 0, 0, 0);
-                    //     overflow: hidden;
-
-                    //     // transition: .3s;
-
-                    //     input {
-                    //     //     // display: none;
-                    //     //     width: 50px;
-
-                    //         &:checked ~ .switch {
-                                 
-                    //                 // // background-color: rgba(9, 255, 0, 0.13);
-                    //                 // #accelPermsButton{
-                    //                 //     background-color: red;
-                    //                 // } 
-                    //                 background-color: red;
-                                
-                    //         }
-                    //     }
-
-                    //     .switch {
-                    //         $switch-diameter: $button-height*.85;
-
-                    //         width: $switch-diameter;
-                    //         height: $switch-diameter;
-
-                    //         position: absolute;
-                    //         top: calc(($button-height - $switch-diameter)/2);
-                    //         left: calc(($button-width - ($switch-diameter*2))/2);
-
-                    //         background-color: rgba(0, 0, 0, 0);
-                    //         border-radius: 50%;
-                    //         box-shadow: -2px 1px 20px 7px rgb(0 0 0 / 25%)
-
-                    //         // &::before {
-                    //         //     position: absolute;
-                    //         //     top: 0;
-                    //         //     left: 0;
-                    //         //     width: 100%;
-                    //         //     height: 100%;
-                    //         //     background-color: #fff;
-                    //         //     border-radius: 25px;
-                    //         //     // z-index: -1;
-                    //         // }
-                    //     }
-
-                    // }
                     .tiltButton {
+                        display: block;
 
                         position: absolute;
                         top: 70px;
