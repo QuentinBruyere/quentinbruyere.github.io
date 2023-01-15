@@ -21,7 +21,7 @@
 
             <div class="tiltButton">
                 <label class="cont">
-                    <input type="checkbox" onclick="getAccel()">
+                    <input type="checkbox" class="tiltCheckbox" onclick="setGyro()">
                     <div class="switch"></div>
                 </label>
                 <p class="tiltLabel">Tilt</p>
@@ -67,9 +67,17 @@
     <noscript>Javascript is needed for tilt effect</noscript>
     <script>
         // BUTTON NEEDED TO ACCESS ON MOBILE
-        function getAccel(){
-            DeviceMotionEvent.requestPermission();
+        let tiltCheckbox = document.querySelector(".tiltCheckbox");
+
+        function setGyro(){
+            if(tiltCheckbox.checked){
+                DeviceMotionEvent.requestPermission();
+            }else{
+                tiltCheckbox.setAttribute("data-tilt-gyroscope", "false");
+            }
         }
+        
+        
     </script>
     <script type="module" src="assets/js/vanilla-tilt.min.js"></script>
     
