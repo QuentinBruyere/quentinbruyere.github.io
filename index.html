@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="profile-page">
-        <div class="profile-card" data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare=".3" data-tilt-gyroscope="true">
+        <div class="profile-card" data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare=".3">
             <!-- <button id="accelPermsButton" onclick="getAccel()" style="height:50px;">Tilt</button> -->
             <!-- <div id="accelPermsButton">
                 <input type="checkbox">
@@ -68,12 +68,14 @@
     <script>
         // BUTTON NEEDED TO ACCESS ON MOBILE
         let tiltCheckbox = document.querySelector(".tiltCheckbox");
+        let profilCard = document.querySelector(".profile-card");
 
         function setGyro(){
             if(tiltCheckbox.checked){
+                profilCard.setAttribute("data-tilt-gyroscope", "true");
                 DeviceMotionEvent.requestPermission();
             }else{
-                tiltCheckbox.setAttribute("data-tilt-gyroscope", "false");
+                profilCard.setAttribute("data-tilt-gyroscope", "false");
             }
         }
         
