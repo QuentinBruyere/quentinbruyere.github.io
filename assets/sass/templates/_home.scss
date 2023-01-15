@@ -40,7 +40,8 @@ body {
                 height: 100%;
 
                 border-radius: 12px;
-                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                        backdrop-filter: blur(15px);
                 box-shadow: 0 20px 70px -10px rgb(51 51 51 / 30%);
 
                 z-index: -1;
