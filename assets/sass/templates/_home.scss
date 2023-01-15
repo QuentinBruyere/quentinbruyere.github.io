@@ -239,3 +239,227 @@ body {
         color: rgb(223, 59, 59);
     }
 }
+
+// @media (max-width: 425px){
+//     body{
+//         .profile-page {
+//             .profile-card {
+//                 padding: 2rem;
+//                 .top-card {
+//                     img {
+//                         width: 125px;
+//                     }
+//                     .name {
+//                         font-size: 1.5rem;
+//                     }
+//                     .job {
+//                         font-size: .7rem;
+//                     }
+//                     .place {
+//                         .place-text {
+//                             font-size: .5rem;
+//                         }
+//                     }
+//                 }
+//                 .languages {
+//                     h3 {
+//                         font-size: 1rem;
+//                         max-width: 200px;
+//                         margin: 0 auto;
+//                         margin-bottom: 1rem;
+//                     }
+//                     div {
+//                         h4 {
+//                             font-size: .75rem;
+//                         }
+//                         p {
+//                             font-size: .75rem;
+//                         }
+//                     }
+//                 }
+//                 .social {
+//                     a {
+//                         img {
+//                             width: 25px;
+//                         }
+//                     }
+//                     .linkedin {
+
+//                     }
+//                     .github {
+
+//                     }
+//                     .cv {
+
+//                     }
+//                     .mail {
+
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+@media (max-width: 425px){
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .profile-page {
+            .profile-card {
+                $parallax1: 27px;
+
+                padding: 2rem;
+
+                .top-card {
+                    margin-bottom: 1.65rem;
+
+                    img {
+                        width: 135px;
+                        margin-top: .5rem;
+                    }
+                    .name {
+                        margin: 1rem 0;
+                        font-size: 2.1rem;
+                    }
+                    .job {
+                        margin-bottom: .75rem;
+                        font-size: 1rem;
+                    }
+
+                    .place{
+                        img {
+                            width: 15px;
+                            margin: 2px;
+                        }
+                        .place-text {
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+                .languages {
+
+                    transform: translateZ($parallax1 + 5);
+
+                    padding: 1rem;
+                    margin-bottom: 2rem;
+
+                    h3 {
+                        font-size: 1rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    div {
+                        margin-bottom: 1rem;
+
+                        h4 {
+                            font-size: .9rem;
+                            margin-bottom: .5rem;
+                        }
+                        p {
+                            margin: 0 auto;
+                            max-width: 200px;
+                            font-size: .75rem;
+                        }
+                    }
+                }
+
+                .social {
+                    
+                    transform: translateZ($parallax1);
+
+                    margin-bottom: 1rem;
+
+                    a {
+                        padding: 5px;
+                        margin: 0 .5rem;
+
+                        img {
+                            width: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/////================-------------- MOBILE ---------------================/////
+
+// @media (max-width: 425px){
+//     body {
+//         background-size: cover;
+//         background-repeat: no-repeat;
+
+//         .profile-page {
+//             .profile-card {
+//                 $parallax1: 27px;
+
+//                 padding: 2rem;
+
+//                 .top-card {
+//                     margin-bottom: 1rem;
+
+//                     img {
+//                         width: 115px;
+//                         margin-top: .25rem;
+//                     }
+//                     .name {
+//                         margin: 1rem 0;
+//                         font-size: 2rem;
+//                     }
+//                     .job {
+//                         margin-bottom: .75rem;
+//                         font-size: 1rem;
+//                     }
+
+//                     .place{
+//                         img {
+//                             width: 15px;
+//                             margin: 2px;
+//                         }
+//                         .place-text {
+//                             font-size: 0.75rem;
+//                         }
+//                     }
+//                 }
+//                 .languages {
+
+//                     padding: .75rem;
+//                     margin-bottom: 1rem;
+
+//                     h3 {
+//                         font-size: 1rem;
+//                         margin-bottom: .75rem;
+//                     }
+
+//                     div {
+//                         margin-bottom: .75rem;
+
+//                         h4 {
+//                             margin-bottom: .35rem;
+//                         }
+//                         p {
+//                             max-width: 250px;
+//                             font-size: .75rem;
+//                         }
+//                     }
+//                 }
+
+//                 .social {
+                    
+//                     margin-bottom: .5rem;
+
+//                     a {
+//                         img {
+//                             width: 35px;
+//                         }
+//                     }
+
+//                 }
+//             }
+//         }
+//     }
+// }
