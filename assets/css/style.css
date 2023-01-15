@@ -153,65 +153,72 @@ body noscript {
 }
 
 @media (max-width: 425px) {
-  body {
+  html {
+    height: webkit-fill-available;
+  }
+  html body {
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100%;
   }
-  body .profile-page .profile-card {
+  html body .profile-page {
+    height: 100%;
+  }
+  html body .profile-page .profile-card {
     padding: 2rem;
   }
-  body .profile-page .profile-card .top-card {
+  html body .profile-page .profile-card .top-card {
     margin-bottom: 1.65rem;
   }
-  body .profile-page .profile-card .top-card img {
+  html body .profile-page .profile-card .top-card img {
     width: 135px;
     margin-top: 0.5rem;
   }
-  body .profile-page .profile-card .top-card .name {
+  html body .profile-page .profile-card .top-card .name {
     margin: 1rem 0;
     font-size: 2.1rem;
   }
-  body .profile-page .profile-card .top-card .job {
+  html body .profile-page .profile-card .top-card .job {
     margin-bottom: 0.75rem;
     font-size: 1rem;
   }
-  body .profile-page .profile-card .top-card .place img {
+  html body .profile-page .profile-card .top-card .place img {
     width: 15px;
     margin: 2px;
   }
-  body .profile-page .profile-card .top-card .place .place-text {
+  html body .profile-page .profile-card .top-card .place .place-text {
     font-size: 0.75rem;
   }
-  body .profile-page .profile-card .languages {
+  html body .profile-page .profile-card .languages {
     transform: translateZ(32px);
     padding: 1rem;
     margin-bottom: 2rem;
   }
-  body .profile-page .profile-card .languages h3 {
+  html body .profile-page .profile-card .languages h3 {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
-  body .profile-page .profile-card .languages div {
+  html body .profile-page .profile-card .languages div {
     margin-bottom: 1rem;
   }
-  body .profile-page .profile-card .languages div h4 {
+  html body .profile-page .profile-card .languages div h4 {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
-  body .profile-page .profile-card .languages div p {
+  html body .profile-page .profile-card .languages div p {
     margin: 0 auto;
     max-width: 200px;
     font-size: 0.75rem;
   }
-  body .profile-page .profile-card .social {
+  html body .profile-page .profile-card .social {
     transform: translateZ(27px);
     margin-bottom: 1rem;
   }
-  body .profile-page .profile-card .social a {
+  html body .profile-page .profile-card .social a {
     padding: 5px;
     margin: 0 0.5rem;
   }
-  body .profile-page .profile-card .social a img {
+  html body .profile-page .profile-card .social a img {
     width: 40px;
   }
 }

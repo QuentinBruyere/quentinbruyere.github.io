@@ -303,81 +303,87 @@ body {
 
 
 @media (max-width: 425px){
-    body {
-        background-size: cover;
-        background-repeat: no-repeat;
+    html {
+        height: webkit-fill-available;
 
-        .profile-page {
-            .profile-card {
-                $parallax1: 27px;
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
 
-                padding: 2rem;
+            .profile-page {
+                height: 100%;
+                .profile-card {
+                    $parallax1: 27px;
 
-                .top-card {
-                    margin-bottom: 1.65rem;
+                    padding: 2rem;
 
-                    img {
-                        width: 135px;
-                        margin-top: .5rem;
-                    }
-                    .name {
-                        margin: 1rem 0;
-                        font-size: 2.1rem;
-                    }
-                    .job {
-                        margin-bottom: .75rem;
-                        font-size: 1rem;
-                    }
-
-                    .place{
-                        img {
-                            width: 15px;
-                            margin: 2px;
-                        }
-                        .place-text {
-                            font-size: 0.75rem;
-                        }
-                    }
-                }
-                .languages {
-
-                    transform: translateZ($parallax1 + 5);
-
-                    padding: 1rem;
-                    margin-bottom: 2rem;
-
-                    h3 {
-                        font-size: 1rem;
-                        margin-bottom: 1rem;
-                    }
-
-                    div {
-                        margin-bottom: 1rem;
-
-                        h4 {
-                            font-size: .9rem;
-                            margin-bottom: .5rem;
-                        }
-                        p {
-                            margin: 0 auto;
-                            max-width: 200px;
-                            font-size: .75rem;
-                        }
-                    }
-                }
-
-                .social {
-                    
-                    transform: translateZ($parallax1);
-
-                    margin-bottom: 1rem;
-
-                    a {
-                        padding: 5px;
-                        margin: 0 .5rem;
+                    .top-card {
+                        margin-bottom: 1.65rem;
 
                         img {
-                            width: 40px;
+                            width: 135px;
+                            margin-top: .5rem;
+                        }
+                        .name {
+                            margin: 1rem 0;
+                            font-size: 2.1rem;
+                        }
+                        .job {
+                            margin-bottom: .75rem;
+                            font-size: 1rem;
+                        }
+
+                        .place{
+                            img {
+                                width: 15px;
+                                margin: 2px;
+                            }
+                            .place-text {
+                                font-size: 0.75rem;
+                            }
+                        }
+                    }
+                    .languages {
+
+                        transform: translateZ($parallax1 + 5);
+
+                        padding: 1rem;
+                        margin-bottom: 2rem;
+
+                        h3 {
+                            font-size: 1rem;
+                            margin-bottom: 1rem;
+                        }
+
+                        div {
+                            margin-bottom: 1rem;
+
+                            h4 {
+                                font-size: .9rem;
+                                margin-bottom: .5rem;
+                            }
+                            p {
+                                margin: 0 auto;
+                                max-width: 200px;
+                                font-size: .75rem;
+                            }
+                        }
+                    }
+
+                    .social {
+                        
+                        transform: translateZ($parallax1);
+
+                        margin-bottom: 1rem;
+
+                        a {
+                            padding: 5px;
+                            margin: 0 .5rem;
+
+                            img {
+                                width: 40px;
+                            }
                         }
                     }
                 }
