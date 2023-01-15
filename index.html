@@ -64,7 +64,7 @@
         </div>
     </div>
     
-    <noscript>Javascript is needed for tilt effect</noscript>
+    <script type="module" src="assets/js/vanilla-tilt.min.js"></script>    
     <script>
         // BUTTON NEEDED TO ACCESS ON MOBILE
         let tiltButton = document.querySelector(".tiltButton");
@@ -96,14 +96,16 @@
                 profilCard.setAttribute("data-tilt-gyroscope", "true");
                 DeviceMotionEvent.requestPermission();
             }else{
-                profilCard.setAttribute("data-tilt-gyroscope", "false");
+                VanillaTilt.init(profilCard, {
+                    gyroscope: false
+                });
             }
         }
         
         
     </script>
-    <script type="module" src="assets/js/vanilla-tilt.min.js"></script>
-    
+
+    <noscript>Javascript is needed for tilt effect</noscript>
     <!-- <script src="assets/js/homemade-tilt.js" type="text/javascript"></script> -->
 </body>
 </html>
