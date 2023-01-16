@@ -11,15 +11,6 @@
     <div class="profile-page">
         <!-- <div class="profile-card" data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare=".3"> -->
         <div class="profile-card">
-            <!-- <button id="accelPermsButton" onclick="getAccel()" style="height:50px;">Tilt</button> -->
-            <!-- <div id="accelPermsButton">
-                <input type="checkbox">
-                <div class="switch"></div>
-            </div> -->
-            <!-- <input type="checkbox" id="accelPermsButton">
-                <div class="switch"></div>
-            </input> -->
-
             <div class="tiltButton">
                 <label class="cont">
                     <input type="checkbox" class="tiltCheckbox">
@@ -100,11 +91,17 @@
             function setGyro(){
                 if(tiltCheckbox.checked){
                     // profilCard.setAttribute("data-tilt-gyroscope", "true");
-                    VanillaTilt.init(profilCard);
+                    profilCard.setAttribute("data-tilt-full-page-listening", "");
+                    VanillaTilt.init(profilCard, {
+                        max: 5,
+                        glare: true,
+                        "max-glare": .3,
+                    });
                     console.log("checkbox checked");
                     if(isIOS){
                         DeviceMotionEvent.requestPermission();
                     }
+                    // data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare=".3"
                 }
                 if(!tiltCheckbox.checked){
                     profilCard.vanillaTilt.destroy();
