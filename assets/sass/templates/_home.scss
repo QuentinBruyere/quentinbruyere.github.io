@@ -48,8 +48,74 @@ body {
             }
 
             .tiltButton {
-                display: none;
+                display: block;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                transform: translate3d(-50%, -50%, $parallax1 + 5);
+
+                text-align: center;
+
+                .cont {
+
+                    $switchDiameter: 17px;
+
+                    position: relative;
+                    display: block;
+                    width: 41px;
+                    height: 21px;
+                    border-radius: 16px;
+                    padding: 2px;
+                    cursor: pointer;
+                    overflow: hidden;
+                    transition: .3s;
+
+                    input {
+                        display: none;
+
+                        &:checked ~ .switch {
+                            margin-left: calc(100% - $switchDiameter);
+                            background: rgba(255, 255, 255, 1);
+
+                            &:before {
+                                background: #3eff6e67;
+                            }
+                        }
+                    }
+
+                    .switch {
+                        display: block;
+                        width: $switchDiameter;
+                        height: $switchDiameter;
+                        background: rgba(255, 255, 255, 0.25);
+                        border-radius: 50%;
+                        box-shadow: 0 3px 8px rgba(255, 255, 255, 0.15);
+                        transition: inherit;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(255, 255, 255, 0.15);
+                            z-index: -1;
+                            transition: inherit;
+                        }
+                    }
+                }
+
+                .tiltLabel {
+                    position: absolute;
+                    top: 110%;
+                    left: 0;
+                    width: 100%;
+                    color: rgba(255, 255, 255, 0.4);
+                    font-size: 1rem;
+                }
             }
+            
 
             .top-card {
                 margin-bottom: 2rem;
@@ -268,73 +334,6 @@ body {
 
                     padding: 2rem;
 
-                    .tiltButton {
-                        display: block;
-
-                        position: absolute;
-                        top: 70px;
-                        right: 20px;
-                        transform: translate3d(-50%, -50%, $parallax1 + 5);
-
-                        text-align: center;
-
-                        .cont {
-                            position: relative;
-                            display: block;
-                            width: 51px;
-                            height: 31px;
-                            border-radius: 16px;
-                            padding: 2px;
-                            cursor: pointer;
-                            overflow: hidden;
-                            transition: .3s;
-    
-    
-                            input {
-                                display: none;
-    
-                                &:checked ~ .switch {
-                                    margin-left: calc(100% - 27px);
-                                    background: rgba(255, 255, 255, 1);
-    
-                                    &:before {
-                                        background: #3eff6e67;
-                                    }
-                                }
-                            }
-    
-                            .switch {
-                                display: block;
-                                width: 27px;
-                                height: 27px;
-                                background: rgba(255, 255, 255, 0.25);
-                                border-radius: 50%;
-                                box-shadow: 0 3px 8px rgba(255, 255, 255, 0.15);
-                                transition: inherit;
-    
-                                &:before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    top: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    background: rgba(255, 255, 255, 0.15);
-                                    z-index: -1;
-                                    transition: inherit;
-                                }
-                            }
-                        }
-    
-                        .tiltLabel {
-                            position: absolute;
-                            top: 110%;
-                            left: 0;
-                            width: 100%;
-                            color: rgba(240, 240, 240, 0.5);
-                            font-size: 1rem;
-                        }
-                    }
 
                     .top-card {
                         margin-bottom: 1.65rem;
@@ -409,81 +408,3 @@ body {
         }
     }
 }
-
-/////================-------------- MOBILE ---------------================/////
-
-// @media (max-width: 425px){
-//     body {
-//         background-size: cover;
-//         background-repeat: no-repeat;
-
-//         .profile-page {
-//             .profile-card {
-//                 $parallax1: 27px;
-
-//                 padding: 2rem;
-
-//                 .top-card {
-//                     margin-bottom: 1rem;
-
-//                     img {
-//                         width: 115px;
-//                         margin-top: .25rem;
-//                     }
-//                     .name {
-//                         margin: 1rem 0;
-//                         font-size: 2rem;
-//                     }
-//                     .job {
-//                         margin-bottom: .75rem;
-//                         font-size: 1rem;
-//                     }
-
-//                     .place{
-//                         img {
-//                             width: 15px;
-//                             margin: 2px;
-//                         }
-//                         .place-text {
-//                             font-size: 0.75rem;
-//                         }
-//                     }
-//                 }
-//                 .languages {
-
-//                     padding: .75rem;
-//                     margin-bottom: 1rem;
-
-//                     h3 {
-//                         font-size: 1rem;
-//                         margin-bottom: .75rem;
-//                     }
-
-//                     div {
-//                         margin-bottom: .75rem;
-
-//                         h4 {
-//                             margin-bottom: .35rem;
-//                         }
-//                         p {
-//                             max-width: 250px;
-//                             font-size: .75rem;
-//                         }
-//                     }
-//                 }
-
-//                 .social {
-                    
-//                     margin-bottom: .5rem;
-
-//                     a {
-//                         img {
-//                             width: 35px;
-//                         }
-//                     }
-
-//                 }
-//             }
-//         }
-//     }
-// }
