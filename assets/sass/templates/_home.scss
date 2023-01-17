@@ -12,291 +12,294 @@ body {
         align-items: center;
         height: 100vh;
 
-        color: #101011;
+        .profile-section {
 
-        .profile-card {
-            $parallax1: 27px;
+            color: #101011;
 
-            display: flex;
-            flex-flow: column nowrap;
-            padding: 2rem;
-            position: relative;
+            .profile-card {
+                $parallax1: 27px;
 
-            border: 1px solid rgba(187, 187, 187, 0.2);
-            border-radius: 12px;
-            background-color: rgba(168, 168, 168, .15);
+                display: flex;
+                flex-flow: column nowrap;
+                padding: 2rem;
+                position: relative;
 
-            text-align: center;
-
-            transform-style: preserve-3d;
-            perspective: 1000px;
-
-            &:after{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-
+                border: 1px solid rgba(187, 187, 187, 0.2);
                 border-radius: 12px;
-                -webkit-backdrop-filter: blur(15px);
-                        backdrop-filter: blur(15px);
-                box-shadow: 0 20px 70px -10px rgb(51 51 51 / 30%);
-
-                z-index: -1;
-            }
-
-            .tiltButton {
-                display: block;
-                position: absolute;
-                top: 10%;
-                right: 10%;
-                // transform: translate3d(-50%, -50%, $parallax1 + 5);
-                transform: translateZ($parallax1 + 5);
+                background-color: rgba(168, 168, 168, .15);
 
                 text-align: center;
 
-                .cont {
+                transform-style: preserve-3d;
+                perspective: 1000px;
 
-                    $switchDiameter: 17px;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
 
-                    position: relative;
+                    border-radius: 12px;
+                    -webkit-backdrop-filter: blur(15px);
+                            backdrop-filter: blur(15px);
+                    box-shadow: 0 20px 70px -10px rgb(51 51 51 / 30%);
+
+                    z-index: -1;
+                }
+
+                .tiltButton {
                     display: block;
-                    width: 41px;
-                    height: 21px;
-                    border-radius: 16px;
-                    padding: 2px;
-                    cursor: pointer;
-                    overflow: hidden;
-                    transition: .3s;
+                    position: absolute;
+                    top: 10%;
+                    right: 10%;
+                    // transform: translate3d(-50%, -50%, $parallax1 + 5);
+                    transform: translateZ($parallax1 + 5);
 
-                    input {
-                        display: none;
+                    text-align: center;
 
-                        &:checked ~ .switch {
-                            margin-left: calc(100% - $switchDiameter);
-                            background: rgba(255, 255, 255, 1);
+                    .cont {
+
+                        $switchDiameter: 17px;
+
+                        position: relative;
+                        display: block;
+                        width: 41px;
+                        height: 21px;
+                        border-radius: 16px;
+                        padding: 2px;
+                        cursor: pointer;
+                        overflow: hidden;
+                        transition: .3s;
+
+                        input {
+                            display: none;
+
+                            &:checked ~ .switch {
+                                margin-left: calc(100% - $switchDiameter);
+                                background: rgba(255, 255, 255, 1);
+
+                                &:before {
+                                    background: #3eff6e67;
+                                }
+                            }
+                        }
+
+                        .switch {
+                            display: block;
+                            width: $switchDiameter;
+                            height: $switchDiameter;
+                            background: rgba(255, 255, 255, 0.25);
+                            border-radius: 50%;
+                            box-shadow: 0 3px 8px rgba(255, 255, 255, 0.15);
+                            transition: inherit;
 
                             &:before {
-                                background: #3eff6e67;
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: rgba(255, 255, 255, 0.15);
+                                z-index: -1;
+                                transition: inherit;
                             }
                         }
                     }
 
-                    .switch {
-                        display: block;
-                        width: $switchDiameter;
-                        height: $switchDiameter;
-                        background: rgba(255, 255, 255, 0.25);
-                        border-radius: 50%;
-                        box-shadow: 0 3px 8px rgba(255, 255, 255, 0.15);
-                        transition: inherit;
+                    .tiltLabel {
+                        position: absolute;
+                        top: 110%;
+                        left: 0;
+                        width: 100%;
+                        color: rgba(255, 255, 255, 0.4);
+                        font-size: 1rem;
+                    }
+                }
+                
 
-                        &:before {
-                            content: "";
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            height: 100%;
-                            background: rgba(255, 255, 255, 0.15);
-                            z-index: -1;
-                            transition: inherit;
+                .top-card {
+                    margin-bottom: 2rem;
+
+                    transform: translateZ($parallax1);
+
+                    img {
+                        width: 175px;
+                        border-radius: 50%;
+                        margin-top: .5rem;
+                    }
+                    .name {
+                        margin: 2rem 0;
+                        font-weight: 400;
+                        font-size: 2.5rem;
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                    .job {
+                        margin-bottom: 1rem;
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                    }
+
+                    .place{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 20px;
+                            margin: 3px;
+                        }
+                        .place-text {
+                            font-weight: 300;
+                            font-size: 0.85rem;
+                        }
+                    }
+                }
+                .languages {
+
+                    transform: translateZ($parallax1 + 5);
+
+                    border-radius: 12px;
+                    padding: 1rem;
+                    background-color: rgba(255, 255, 255, .1);
+                    // backdrop-filter: blur(10px); break the tilt effect
+                    box-shadow: 1px 1px 20px 0px rgb(0 0 0 / 10%);
+                    margin-bottom: 2rem;
+
+                    h3 {
+                        font-size: 1.15rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+
+                    div {
+                        margin-bottom: 1rem;
+
+                        h4 {
+                            margin-bottom: .5rem;
+                        }
+                        p {
+                            margin: 0 auto;
+                            max-width: 300px;
+                            font-size: .9rem;
                         }
                     }
                 }
 
-                .tiltLabel {
-                    position: absolute;
-                    top: 110%;
-                    left: 0;
-                    width: 100%;
-                    color: rgba(255, 255, 255, 0.4);
-                    font-size: 1rem;
-                }
-            }
-            
-
-            .top-card {
-                margin-bottom: 2rem;
-
-                transform: translateZ($parallax1);
-
-                img {
-                    width: 175px;
-                    border-radius: 50%;
-                    margin-top: .5rem;
-                }
-                .name {
-                    margin: 2rem 0;
-                    font-weight: 400;
-                    font-size: 2.5rem;
-
-                    span {
-                        font-weight: 600;
-                    }
-                }
-                .job {
-                    margin-bottom: 1rem;
-                    font-weight: 500;
-                    font-size: 1.2rem;
-                }
-
-                .place{
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: center;
-                    align-items: center;
-
-                    img {
-                        width: 20px;
-                        margin: 3px;
-                    }
-                    .place-text {
-                        font-weight: 300;
-                        font-size: 0.85rem;
-                    }
-                }
-            }
-            .languages {
-
-                transform: translateZ($parallax1 + 5);
-
-                border-radius: 12px;
-                padding: 1rem;
-                background-color: rgba(255, 255, 255, .1);
-                // backdrop-filter: blur(10px); break the tilt effect
-                box-shadow: 1px 1px 20px 0px rgb(0 0 0 / 10%);
-                margin-bottom: 2rem;
-
-                h3 {
-                    font-size: 1.15rem;
-                    font-weight: 600;
-                    margin-bottom: 1rem;
-                }
-
-                div {
-                    margin-bottom: 1rem;
-
-                    h4 {
-                        margin-bottom: .5rem;
-                    }
-                    p {
-                        margin: 0 auto;
-                        max-width: 300px;
-                        font-size: .9rem;
-                    }
-                }
-            }
-
-            .social {
-                
-                display: flex;
-                justify-content: space-around;
-
-                transform: translateZ($parallax1);
-
-                margin-bottom: 1rem;
-
-                // Shiny effect on after which hide anchor's links
-
-                // button {
-                //     background-color: rgba(0, 0, 0, 0);
-                //     border: none;
-                //     border-radius: 12px;
-                //     position: relative;
-                //     padding: 5px;
-                //     margin: 0 .5rem;
-
-                //     img {
-                //         width: 50px;
-                //     }
-
-                //     // &:after {
-                //     //     content: "";
-                //     //     position: absolute;
-                //     //     top: 0;
-                //     //     left: 0;
-                //     //     height: 100%;
-                //     //     width: 100%;
-                //     //     border-radius: 12px;
-                        
-                //     //     background: linear-gradient(
-                //     //         45deg,
-                //     //         red,
-                //     //         blue,
-                //     //         transparent 68%
-                //     //     );
-
-                //     //     // background: linear-gradient(
-                //     //     //     45deg,
-                //     //     //     transparent 50%,
-                //     //     //     rgba(255,255,255,0.3) 58%,
-                //     //     //     rgba(255,255,255,0.6) 67%,
-                //     //     //     transparent 68%
-                //     //     // );
-
-                //     //     background-size: 400% 100%;
-                //     //     background-position: 165% 0;
-                //     //     transition: .8s;
-                //     // }
-
-                //     &:hover{
-                //         cursor: pointer;
-
-                //         &:after {
-                //             background-position: -20% 0;
-                //         }
-                //     }
-                // }
-
-                a {
-                    background-color: rgba(0, 0, 0, 0);
-                    border: none;
-                    border-radius: 12px;
-                    position: relative;
-                    padding: 5px;
-                    margin: 0 .5rem;
-
-                    img {
-                        width: 50px;
-                    }
-                }
-
-                $opacity: .7;
-
-                .linkedin {
-                    background-color: rgba(10, 102, 194, $opacity);
-
-                    img {
-                        transform: scale(0.85) translateY(2.5px);
-                    }
-                }
-
-                .github {
-                    background-color: rgba(36, 41, 47, $opacity);
-
-                    img {
-                        transform: scale(0.8);
-                    }
-                }
-
-                .cv {
-                    // background-color: rgba(153, 24, 131, $opacity);
-                    background-color: rgba(241, 159, 109, $opacity);
+                .social {
                     
-                    img {
-                        transform: scale(0.8);
+                    display: flex;
+                    justify-content: space-around;
+
+                    transform: translateZ($parallax1);
+
+                    margin-bottom: 1rem;
+
+                    // Shiny effect on after which hide anchor's links
+
+                    // button {
+                    //     background-color: rgba(0, 0, 0, 0);
+                    //     border: none;
+                    //     border-radius: 12px;
+                    //     position: relative;
+                    //     padding: 5px;
+                    //     margin: 0 .5rem;
+
+                    //     img {
+                    //         width: 50px;
+                    //     }
+
+                    //     // &:after {
+                    //     //     content: "";
+                    //     //     position: absolute;
+                    //     //     top: 0;
+                    //     //     left: 0;
+                    //     //     height: 100%;
+                    //     //     width: 100%;
+                    //     //     border-radius: 12px;
+                            
+                    //     //     background: linear-gradient(
+                    //     //         45deg,
+                    //     //         red,
+                    //     //         blue,
+                    //     //         transparent 68%
+                    //     //     );
+
+                    //     //     // background: linear-gradient(
+                    //     //     //     45deg,
+                    //     //     //     transparent 50%,
+                    //     //     //     rgba(255,255,255,0.3) 58%,
+                    //     //     //     rgba(255,255,255,0.6) 67%,
+                    //     //     //     transparent 68%
+                    //     //     // );
+
+                    //     //     background-size: 400% 100%;
+                    //     //     background-position: 165% 0;
+                    //     //     transition: .8s;
+                    //     // }
+
+                    //     &:hover{
+                    //         cursor: pointer;
+
+                    //         &:after {
+                    //             background-position: -20% 0;
+                    //         }
+                    //     }
+                    // }
+
+                    a {
+                        background-color: rgba(0, 0, 0, 0);
+                        border: none;
+                        border-radius: 12px;
+                        position: relative;
+                        padding: 5px;
+                        margin: 0 .5rem;
+
+                        img {
+                            width: 50px;
+                        }
                     }
-                }
 
-                .mail {
-                    // background-color: rgba(72, 201, 100, $opacity);
-                    background-color: rgba(133, 180, 230, $opacity);
+                    $opacity: .7;
 
-                    img {
-                        transform: scale(0.8);
+                    .linkedin {
+                        background-color: rgba(10, 102, 194, $opacity);
+
+                        img {
+                            transform: scale(0.85) translateY(2.5px);
+                        }
+                    }
+
+                    .github {
+                        background-color: rgba(36, 41, 47, $opacity);
+
+                        img {
+                            transform: scale(0.8);
+                        }
+                    }
+
+                    .cv {
+                        // background-color: rgba(153, 24, 131, $opacity);
+                        background-color: rgba(241, 159, 109, $opacity);
+                        
+                        img {
+                            transform: scale(0.8);
+                        }
+                    }
+
+                    .mail {
+                        // background-color: rgba(72, 201, 100, $opacity);
+                        background-color: rgba(133, 180, 230, $opacity);
+
+                        img {
+                            transform: scale(0.8);
+                        }
                     }
                 }
             }
@@ -326,81 +329,83 @@ body {
             height: 100%;
             background-position: 50% 0;
 
+            .profile-section {
 
-            .profile-page {
-                height: 100%;
+                .profile-page {
+                    height: 100%;
 
-                .profile-card {
-                    $parallax1: 27px;
+                    .profile-card {
+                        $parallax1: 27px;
 
-                    padding: 2rem;
+                        padding: 2rem;
 
 
-                    .top-card {
-                        margin-bottom: 1.65rem;
-
-                        img {
-                            width: 135px;
-                            margin-top: .5rem;
-                        }
-                        .name {
-                            margin: 1rem 0;
-                            font-size: 2.1rem;
-                        }
-                        .job {
-                            margin-bottom: .75rem;
-                            font-size: 1rem;
-                        }
-
-                        .place{
-                            img {
-                                width: 15px;
-                                margin: 2px;
-                            }
-                            .place-text {
-                                font-size: 0.75rem;
-                            }
-                        }
-                    }
-                    .languages {
-
-                        transform: translateZ($parallax1 + 5);
-
-                        padding: 1rem;
-                        margin-bottom: 2rem;
-
-                        h3 {
-                            font-size: 1rem;
-                            margin-bottom: 1rem;
-                        }
-
-                        div {
-                            margin-bottom: 1rem;
-
-                            h4 {
-                                font-size: .9rem;
-                                margin-bottom: .5rem;
-                            }
-                            p {
-                                margin: 0 auto;
-                                max-width: 200px;
-                                font-size: .75rem;
-                            }
-                        }
-                    }
-
-                    .social {
-                        
-                        transform: translateZ($parallax1);
-
-                        margin-bottom: 1rem;
-
-                        a {
-                            padding: 5px;
-                            margin: 0 .5rem;
+                        .top-card {
+                            margin-bottom: 1.65rem;
 
                             img {
-                                width: 40px;
+                                width: 135px;
+                                margin-top: .5rem;
+                            }
+                            .name {
+                                margin: 1rem 0;
+                                font-size: 2.1rem;
+                            }
+                            .job {
+                                margin-bottom: .75rem;
+                                font-size: 1rem;
+                            }
+
+                            .place{
+                                img {
+                                    width: 15px;
+                                    margin: 2px;
+                                }
+                                .place-text {
+                                    font-size: 0.75rem;
+                                }
+                            }
+                        }
+                        .languages {
+
+                            transform: translateZ($parallax1 + 5);
+
+                            padding: 1rem;
+                            margin-bottom: 2rem;
+
+                            h3 {
+                                font-size: 1rem;
+                                margin-bottom: 1rem;
+                            }
+
+                            div {
+                                margin-bottom: 1rem;
+
+                                h4 {
+                                    font-size: .9rem;
+                                    margin-bottom: .5rem;
+                                }
+                                p {
+                                    margin: 0 auto;
+                                    max-width: 200px;
+                                    font-size: .75rem;
+                                }
+                            }
+                        }
+
+                        .social {
+                            
+                            transform: translateZ($parallax1);
+
+                            margin-bottom: 1rem;
+
+                            a {
+                                padding: 5px;
+                                margin: 0 .5rem;
+
+                                img {
+                                    width: 40px;
+                                }
                             }
                         }
                     }

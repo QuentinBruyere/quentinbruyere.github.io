@@ -17,9 +17,11 @@ body .profile-page {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+body .profile-page .profile-section {
   color: #101011;
 }
-body .profile-page .profile-card {
+body .profile-page .profile-section .profile-card {
   display: flex;
   flex-flow: column nowrap;
   padding: 2rem;
@@ -31,7 +33,7 @@ body .profile-page .profile-card {
   transform-style: preserve-3d;
   perspective: 1000px;
 }
-body .profile-page .profile-card:after {
+body .profile-page .profile-section .profile-card:after {
   content: "";
   position: absolute;
   top: 0;
@@ -44,7 +46,7 @@ body .profile-page .profile-card:after {
   box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.3);
   z-index: -1;
 }
-body .profile-page .profile-card .tiltButton {
+body .profile-page .profile-section .profile-card .tiltButton {
   display: block;
   position: absolute;
   top: 10%;
@@ -52,7 +54,7 @@ body .profile-page .profile-card .tiltButton {
   transform: translateZ(32px);
   text-align: center;
 }
-body .profile-page .profile-card .tiltButton .cont {
+body .profile-page .profile-section .profile-card .tiltButton .cont {
   position: relative;
   display: block;
   width: 41px;
@@ -63,17 +65,17 @@ body .profile-page .profile-card .tiltButton .cont {
   overflow: hidden;
   transition: 0.3s;
 }
-body .profile-page .profile-card .tiltButton .cont input {
+body .profile-page .profile-section .profile-card .tiltButton .cont input {
   display: none;
 }
-body .profile-page .profile-card .tiltButton .cont input:checked ~ .switch {
+body .profile-page .profile-section .profile-card .tiltButton .cont input:checked ~ .switch {
   margin-left: calc(100% - 17px);
   background: rgb(255, 255, 255);
 }
-body .profile-page .profile-card .tiltButton .cont input:checked ~ .switch:before {
+body .profile-page .profile-section .profile-card .tiltButton .cont input:checked ~ .switch:before {
   background: rgba(62, 255, 110, 0.4039215686);
 }
-body .profile-page .profile-card .tiltButton .cont .switch {
+body .profile-page .profile-section .profile-card .tiltButton .cont .switch {
   display: block;
   width: 17px;
   height: 17px;
@@ -82,7 +84,7 @@ body .profile-page .profile-card .tiltButton .cont .switch {
   box-shadow: 0 3px 8px rgba(255, 255, 255, 0.15);
   transition: inherit;
 }
-body .profile-page .profile-card .tiltButton .cont .switch:before {
+body .profile-page .profile-section .profile-card .tiltButton .cont .switch:before {
   content: "";
   position: absolute;
   left: 0;
@@ -93,7 +95,7 @@ body .profile-page .profile-card .tiltButton .cont .switch:before {
   z-index: -1;
   transition: inherit;
 }
-body .profile-page .profile-card .tiltButton .tiltLabel {
+body .profile-page .profile-section .profile-card .tiltButton .tiltLabel {
   position: absolute;
   top: 110%;
   left: 0;
@@ -101,43 +103,43 @@ body .profile-page .profile-card .tiltButton .tiltLabel {
   color: rgba(255, 255, 255, 0.4);
   font-size: 1rem;
 }
-body .profile-page .profile-card .top-card {
+body .profile-page .profile-section .profile-card .top-card {
   margin-bottom: 2rem;
   transform: translateZ(27px);
 }
-body .profile-page .profile-card .top-card img {
+body .profile-page .profile-section .profile-card .top-card img {
   width: 175px;
   border-radius: 50%;
   margin-top: 0.5rem;
 }
-body .profile-page .profile-card .top-card .name {
+body .profile-page .profile-section .profile-card .top-card .name {
   margin: 2rem 0;
   font-weight: 400;
   font-size: 2.5rem;
 }
-body .profile-page .profile-card .top-card .name span {
+body .profile-page .profile-section .profile-card .top-card .name span {
   font-weight: 600;
 }
-body .profile-page .profile-card .top-card .job {
+body .profile-page .profile-section .profile-card .top-card .job {
   margin-bottom: 1rem;
   font-weight: 500;
   font-size: 1.2rem;
 }
-body .profile-page .profile-card .top-card .place {
+body .profile-page .profile-section .profile-card .top-card .place {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
-body .profile-page .profile-card .top-card .place img {
+body .profile-page .profile-section .profile-card .top-card .place img {
   width: 20px;
   margin: 3px;
 }
-body .profile-page .profile-card .top-card .place .place-text {
+body .profile-page .profile-section .profile-card .top-card .place .place-text {
   font-weight: 300;
   font-size: 0.85rem;
 }
-body .profile-page .profile-card .languages {
+body .profile-page .profile-section .profile-card .languages {
   transform: translateZ(32px);
   border-radius: 12px;
   padding: 1rem;
@@ -145,29 +147,29 @@ body .profile-page .profile-card .languages {
   box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
-body .profile-page .profile-card .languages h3 {
+body .profile-page .profile-section .profile-card .languages h3 {
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
-body .profile-page .profile-card .languages div {
+body .profile-page .profile-section .profile-card .languages div {
   margin-bottom: 1rem;
 }
-body .profile-page .profile-card .languages div h4 {
+body .profile-page .profile-section .profile-card .languages div h4 {
   margin-bottom: 0.5rem;
 }
-body .profile-page .profile-card .languages div p {
+body .profile-page .profile-section .profile-card .languages div p {
   margin: 0 auto;
   max-width: 300px;
   font-size: 0.9rem;
 }
-body .profile-page .profile-card .social {
+body .profile-page .profile-section .profile-card .social {
   display: flex;
   justify-content: space-around;
   transform: translateZ(27px);
   margin-bottom: 1rem;
 }
-body .profile-page .profile-card .social a {
+body .profile-page .profile-section .profile-card .social a {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   border-radius: 12px;
@@ -175,31 +177,31 @@ body .profile-page .profile-card .social a {
   padding: 5px;
   margin: 0 0.5rem;
 }
-body .profile-page .profile-card .social a img {
+body .profile-page .profile-section .profile-card .social a img {
   width: 50px;
 }
-body .profile-page .profile-card .social .linkedin {
+body .profile-page .profile-section .profile-card .social .linkedin {
   background-color: rgba(10, 102, 194, 0.7);
 }
-body .profile-page .profile-card .social .linkedin img {
+body .profile-page .profile-section .profile-card .social .linkedin img {
   transform: scale(0.85) translateY(2.5px);
 }
-body .profile-page .profile-card .social .github {
+body .profile-page .profile-section .profile-card .social .github {
   background-color: rgba(36, 41, 47, 0.7);
 }
-body .profile-page .profile-card .social .github img {
+body .profile-page .profile-section .profile-card .social .github img {
   transform: scale(0.8);
 }
-body .profile-page .profile-card .social .cv {
+body .profile-page .profile-section .profile-card .social .cv {
   background-color: rgba(241, 159, 109, 0.7);
 }
-body .profile-page .profile-card .social .cv img {
+body .profile-page .profile-section .profile-card .social .cv img {
   transform: scale(0.8);
 }
-body .profile-page .profile-card .social .mail {
+body .profile-page .profile-section .profile-card .social .mail {
   background-color: rgba(133, 180, 230, 0.7);
 }
-body .profile-page .profile-card .social .mail img {
+body .profile-page .profile-section .profile-card .social .mail img {
   transform: scale(0.8);
 }
 body noscript {
@@ -224,64 +226,64 @@ body noscript {
     height: 100%;
     background-position: 50% 0;
   }
-  html body .profile-page {
+  html body .profile-section .profile-page {
     height: 100%;
   }
-  html body .profile-page .profile-card {
+  html body .profile-section .profile-page .profile-card {
     padding: 2rem;
   }
-  html body .profile-page .profile-card .top-card {
+  html body .profile-section .profile-page .profile-card .top-card {
     margin-bottom: 1.65rem;
   }
-  html body .profile-page .profile-card .top-card img {
+  html body .profile-section .profile-page .profile-card .top-card img {
     width: 135px;
     margin-top: 0.5rem;
   }
-  html body .profile-page .profile-card .top-card .name {
+  html body .profile-section .profile-page .profile-card .top-card .name {
     margin: 1rem 0;
     font-size: 2.1rem;
   }
-  html body .profile-page .profile-card .top-card .job {
+  html body .profile-section .profile-page .profile-card .top-card .job {
     margin-bottom: 0.75rem;
     font-size: 1rem;
   }
-  html body .profile-page .profile-card .top-card .place img {
+  html body .profile-section .profile-page .profile-card .top-card .place img {
     width: 15px;
     margin: 2px;
   }
-  html body .profile-page .profile-card .top-card .place .place-text {
+  html body .profile-section .profile-page .profile-card .top-card .place .place-text {
     font-size: 0.75rem;
   }
-  html body .profile-page .profile-card .languages {
+  html body .profile-section .profile-page .profile-card .languages {
     transform: translateZ(32px);
     padding: 1rem;
     margin-bottom: 2rem;
   }
-  html body .profile-page .profile-card .languages h3 {
+  html body .profile-section .profile-page .profile-card .languages h3 {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
-  html body .profile-page .profile-card .languages div {
+  html body .profile-section .profile-page .profile-card .languages div {
     margin-bottom: 1rem;
   }
-  html body .profile-page .profile-card .languages div h4 {
+  html body .profile-section .profile-page .profile-card .languages div h4 {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
-  html body .profile-page .profile-card .languages div p {
+  html body .profile-section .profile-page .profile-card .languages div p {
     margin: 0 auto;
     max-width: 200px;
     font-size: 0.75rem;
   }
-  html body .profile-page .profile-card .social {
+  html body .profile-section .profile-page .profile-card .social {
     transform: translateZ(27px);
     margin-bottom: 1rem;
   }
-  html body .profile-page .profile-card .social a {
+  html body .profile-section .profile-page .profile-card .social a {
     padding: 5px;
     margin: 0 0.5rem;
   }
-  html body .profile-page .profile-card .social a img {
+  html body .profile-section .profile-page .profile-card .social a img {
     width: 40px;
   }
 }

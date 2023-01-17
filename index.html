@@ -12,48 +12,50 @@
 <body>
     <div class="profile-page">
         <!-- <div class="profile-card" data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare=".3"> -->
-        <div class="profile-card">
-            <div class="tiltButton">
-                <label class="cont">
-                    <input type="checkbox" class="tiltCheckbox">
-                    <div class="switch"></div>
-                </label>
-                <p class="tiltLabel">Tilt</p>
-            </div>
+        <div class="profile-section">
+            <div class="profile-card">
+                <div class="tiltButton">
+                    <label class="cont">
+                        <input type="checkbox" class="tiltCheckbox">
+                        <div class="switch"></div>
+                    </label>
+                    <p class="tiltLabel">Tilt</p>
+                </div>
 
-            <div class="top-card">
-                <img src="assets/imgs/profile-pic-min.png" alt="Photo de profil">
-                <h2 class="name">Quentin <span>Bruyère</span></h2>
-                <h3 class="job">Web Developer - Integrator</h3>
-                <div class="place">
-                    <img src="assets/imgs/icons/icons8-geography-50.png" alt="Geography">
-                    <p class="place-text">Rennes, Britanny, France</p>
+                <div class="top-card">
+                    <img src="assets/imgs/profile-pic-min.png" alt="Photo de profil">
+                    <h2 class="name">Quentin <span>Bruyère</span></h2>
+                    <h3 class="job">Web Developer - Integrator</h3>
+                    <div class="place">
+                        <img src="assets/imgs/icons/icons8-geography-50.png" alt="Geography">
+                        <p class="place-text">Rennes, Britanny, France</p>
+                    </div>
                 </div>
-            </div>
-            <div class="languages">
-                <h3>Languages - Frameworks - Librairies</h3>
-                <div class="languages_known">
-                    <h4>Known</h4>
-                    <p>HTML/CSS - Javascript - PHP - MySQL - SASS - JQuery</p>
+                <div class="languages">
+                    <h3>Languages - Frameworks - Librairies</h3>
+                    <div class="languages_known">
+                        <h4>Known</h4>
+                        <p>HTML/CSS - Javascript - PHP - MySQL - SASS - JQuery</p>
+                    </div>
+                    <div class="languages_inLearning">
+                        <h4>Learning</h4>
+                        <p>React JS, Vue.js, Symfony</p>
+                    </div>
                 </div>
-                <div class="languages_inLearning">
-                    <h4>Learning</h4>
-                    <p>React JS, Vue.js, Symfony</p>
+                <div class="social">
+                    <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/quentin-bruy%C3%A8re-41a099224/" title="Linkedin" data-tilt data-tilt-axis="x" data-tilt-scale="1.1" data-tilt-speed="1000" data-tilt-perspective="200">
+                        <img src="assets\imgs\icons\linkedin-60.png" alt="Linkedin"/>
+                    </a>
+                    <a class="github" target="_blank" href="https://github.com/QuentinBruyere" title="GitHub" data-tilt data-tilt-axis="x" data-tilt-scale="1.1" data-tilt-speed="1000" data-tilt-perspective="200">
+                        <img src="assets\imgs\icons\github.png" alt="GitHub"/>
+                    </a>
+                    <a class="cv" target="_blank" href="assets\files\bruyere_quentin_cv.pdf" title="CV" data-tilt data-tilt-axis="x" data-tilt-scale="1.1" data-tilt-speed="1000" data-tilt-perspective="200">
+                        <img src="assets\imgs\icons\cv2-64.png" alt="CV"/>
+                    </a>
+                    <a class="mail" target="_blank" href="mailto:quentin.bruyere1@gmail.com" title="Mail" data-tilt data-tilt-axis="x" data-tilt-scale="1.1" data-tilt-speed="1000" data-tilt-perspective="200">
+                        <img src="assets\imgs\icons\envelope-96.png" alt="Mail"/>
+                    </a>
                 </div>
-            </div>
-            <div class="social">
-                <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/quentin-bruy%C3%A8re-41a099224/" title="Linkedin" data-tilt data-tilt-axis="x" data-tilt-scale="1.1" data-tilt-speed="1000" data-tilt-perspective="200">
-                    <img src="assets\imgs\icons\linkedin-60.png" alt="Linkedin"/>
-                </a>
-                <a class="github" target="_blank" href="https://github.com/QuentinBruyere" title="GitHub" data-tilt data-tilt-axis="x" data-tilt-scale="1.1" data-tilt-speed="1000" data-tilt-perspective="200">
-                    <img src="assets\imgs\icons\github.png" alt="GitHub"/>
-                </a>
-                <a class="cv" target="_blank" href="assets\files\bruyere_quentin_cv.pdf" title="CV" data-tilt data-tilt-axis="x" data-tilt-scale="1.1" data-tilt-speed="1000" data-tilt-perspective="200">
-                    <img src="assets\imgs\icons\cv2-64.png" alt="CV"/>
-                </a>
-                <a class="mail" target="_blank" href="mailto:quentin.bruyere1@gmail.com" title="Mail" data-tilt data-tilt-axis="x" data-tilt-scale="1.1" data-tilt-speed="1000" data-tilt-perspective="200">
-                    <img src="assets\imgs\icons\envelope-96.png" alt="Mail"/>
-                </a>
             </div>
         </div>
     </div>
@@ -65,7 +67,7 @@
             // BUTTON NEEDED TO ACCESS ON MOBILE
             let tiltButton = document.querySelector(".tiltButton");
             let tiltCheckbox = document.querySelector(".tiltCheckbox");
-            let profilPage = document.querySelector(".profile-page");
+            let profilSection = document.querySelector(".profile-section");
             let profilCard = document.querySelector(".profile-card");
             let topCard = document.querySelector(".top-card");
             let languages = document.querySelector(".languages");
@@ -89,8 +91,9 @@
 
             function scalling(){
                 console.log("page scaled");
-                let scale = (window.innerHeight)/956;
-                profilPage.style.setProperty("transform", `scale(${scale})`);
+                let profilCardHeight = profilCard.offsetHeight;
+                let scale = window.innerHeight/(profilCardHeight + 100);
+                profilSection.style.setProperty("transform", `scale(${scale})`);
             }
 
             function tiltSwitch(){
