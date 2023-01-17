@@ -48,8 +48,8 @@ body .profile-page .profile-card .tiltButton {
   display: block;
   position: absolute;
   top: 10%;
-  right: 5%;
-  transform: translate3d(-50%, -50%, 32px);
+  right: 10%;
+  transform: translateZ(32px);
   text-align: center;
 }
 body .profile-page .profile-card .tiltButton .cont {
