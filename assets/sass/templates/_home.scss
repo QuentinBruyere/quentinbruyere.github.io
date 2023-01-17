@@ -50,8 +50,8 @@ body {
             .tiltButton {
                 display: block;
                 position: absolute;
-                top: 70px;
-                right: 20px;
+                top: 10%;
+                right: 5%;
                 transform: translate3d(-50%, -50%, $parallax1 + 5);
 
                 text-align: center;

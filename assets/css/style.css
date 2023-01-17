@@ -47,8 +47,8 @@ body .profile-page .profile-card:after {
 body .profile-page .profile-card .tiltButton {
   display: block;
   position: absolute;
-  top: 70px;
-  right: 20px;
+  top: 10%;
+  right: 5%;
   transform: translate3d(-50%, -50%, 32px);
   text-align: center;
 }
