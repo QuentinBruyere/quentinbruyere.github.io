@@ -166,8 +166,8 @@ body .profile-page .profile-section .profile-card .languages div p {
 body .profile-page .profile-section .profile-card .social {
   display: flex;
   justify-content: space-around;
-  transform: translateZ(27px);
   margin-bottom: 1rem;
+  transform: translateZ(27px);
 }
 body .profile-page .profile-section .profile-card .social a {
   background-color: rgba(0, 0, 0, 0);
@@ -255,9 +255,9 @@ body noscript {
     font-size: 0.75rem;
   }
   html body .profile-section .profile-page .profile-card .languages {
-    transform: translateZ(32px);
     padding: 1rem;
     margin-bottom: 2rem;
+    transform: translateZ(32px);
   }
   html body .profile-section .profile-page .profile-card .languages h3 {
     font-size: 1rem;
@@ -276,8 +276,8 @@ body noscript {
     font-size: 0.75rem;
   }
   html body .profile-section .profile-page .profile-card .social {
-    transform: translateZ(27px);
     margin-bottom: 1rem;
+    transform: translateZ(27px);
   }
   html body .profile-section .profile-page .profile-card .social a {
     padding: 5px;

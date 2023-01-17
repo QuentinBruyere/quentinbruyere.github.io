@@ -1,3 +1,7 @@
+///////====----                                                ----====///////
+////////////=======-------       DESKTOP-FIRST       -------=======///////////
+///////====----                                                ----====///////
+
 body {
     background-image: url("../imgs/minimalist-background_1_3840x2160.jpg");
     background-size: cover;
@@ -13,10 +17,10 @@ body {
         height: 100vh;
 
         .profile-section {
-
             color: #101011;
 
             .profile-card {
+
                 $parallax1: 27px;
 
                 display: flex;
@@ -54,7 +58,6 @@ body {
                     position: absolute;
                     top: 10%;
                     right: 10%;
-                    // transform: translate3d(-50%, -50%, $parallax1 + 5);
                     transform: translateZ($parallax1 + 5);
 
                     text-align: center;
@@ -162,13 +165,11 @@ body {
                     }
                 }
                 .languages {
-
                     transform: translateZ($parallax1 + 5);
 
                     border-radius: 12px;
                     padding: 1rem;
                     background-color: rgba(255, 255, 255, .1);
-                    // backdrop-filter: blur(10px); break the tilt effect
                     box-shadow: 1px 1px 20px 0px rgb(0 0 0 / 10%);
                     margin-bottom: 2rem;
 
@@ -193,65 +194,12 @@ body {
                 }
 
                 .social {
-                    
                     display: flex;
                     justify-content: space-around;
 
-                    transform: translateZ($parallax1);
-
                     margin-bottom: 1rem;
 
-                    // Shiny effect on after which hide anchor's links
-
-                    // button {
-                    //     background-color: rgba(0, 0, 0, 0);
-                    //     border: none;
-                    //     border-radius: 12px;
-                    //     position: relative;
-                    //     padding: 5px;
-                    //     margin: 0 .5rem;
-
-                    //     img {
-                    //         width: 50px;
-                    //     }
-
-                    //     // &:after {
-                    //     //     content: "";
-                    //     //     position: absolute;
-                    //     //     top: 0;
-                    //     //     left: 0;
-                    //     //     height: 100%;
-                    //     //     width: 100%;
-                    //     //     border-radius: 12px;
-                            
-                    //     //     background: linear-gradient(
-                    //     //         45deg,
-                    //     //         red,
-                    //     //         blue,
-                    //     //         transparent 68%
-                    //     //     );
-
-                    //     //     // background: linear-gradient(
-                    //     //     //     45deg,
-                    //     //     //     transparent 50%,
-                    //     //     //     rgba(255,255,255,0.3) 58%,
-                    //     //     //     rgba(255,255,255,0.6) 67%,
-                    //     //     //     transparent 68%
-                    //     //     // );
-
-                    //     //     background-size: 400% 100%;
-                    //     //     background-position: 165% 0;
-                    //     //     transition: .8s;
-                    //     // }
-
-                    //     &:hover{
-                    //         cursor: pointer;
-
-                    //         &:after {
-                    //             background-position: -20% 0;
-                    //         }
-                    //     }
-                    // }
+                    transform: translateZ($parallax1);
 
                     a {
                         background-color: rgba(0, 0, 0, 0);
@@ -315,6 +263,15 @@ body {
     }
 }
 
+
+
+
+
+///////====----                                                ----====///////
+///////////////=======-------       MOBILE       -------=======///////////////
+///////====----                                                ----====///////
+
+
 @media (max-width: 425px){
     html {
         height: -webkit-fill-available;
@@ -338,7 +295,6 @@ body {
                         $parallax1: 27px;
 
                         padding: 2rem;
-
 
                         .top-card {
                             margin-bottom: 1.65rem;
@@ -367,11 +323,10 @@ body {
                             }
                         }
                         .languages {
-
-                            transform: translateZ($parallax1 + 5);
-
                             padding: 1rem;
                             margin-bottom: 2rem;
+
+                            transform: translateZ($parallax1 + 5);
 
                             h3 {
                                 font-size: 1rem;
@@ -394,10 +349,9 @@ body {
                         }
 
                         .social {
-                            
-                            transform: translateZ($parallax1);
-
                             margin-bottom: 1rem;
+
+                            transform: translateZ($parallax1);
 
                             a {
                                 padding: 5px;
