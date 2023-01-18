@@ -30,7 +30,12 @@ addEventListener('DOMContentLoaded', (event) => {
 
     if(isIOS){
         console.log("IOS");
-        DeviceMotionEvent.requestPermission();
+        DeviceMotionEvent.requestPermission()
+        .then(response => {
+            if(response == 'default') {
+                DeviceMotionEvent.requestPermission();
+            }
+        })
     }else{
         console.log("not IOS");
     }
