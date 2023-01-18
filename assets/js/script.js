@@ -19,6 +19,7 @@ addEventListener('DOMContentLoaded', (event) => {
     //////
     ///
     scalling();
+    tiltSwitch();
 
 
     ////////// EVENT-LISTENERS
@@ -41,19 +42,19 @@ addEventListener('DOMContentLoaded', (event) => {
     }
 
     function tiltSwitch(){
-        if(tiltCheckbox.checked){
-            profilCard.setAttribute("data-tilt-full-page-listening", "");
-            VanillaTilt.init(profilCard, {
-                max: 5,
-                glare: true,
-                "max-glare": .3,
-            });
+        // if(tiltCheckbox.checked){
+        //     profilCard.setAttribute("data-tilt-full-page-listening", "");
+        //     VanillaTilt.init(profilCard, {
+        //         max: 5,
+        //         glare: true,
+        //         "max-glare": .3,
+        //     });
             
             if(isIOS){
                 DeviceMotionEvent.requestPermission();
             }
             // console.log("checkbox checked");
-        }
+        // }
         if(!tiltCheckbox.checked){
             profilCard.vanillaTilt.destroy();
             // console.log("should destroy");
