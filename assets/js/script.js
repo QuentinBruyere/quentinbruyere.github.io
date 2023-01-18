@@ -28,47 +28,6 @@ addEventListener('DOMContentLoaded', (event) => {
     window.addEventListener("resize", scalling);
     tiltCheckbox.addEventListener("click", tiltSwitch);
 
-    // console.log(navigator.permissions.query({ name:'geolocation' }));
-    // console.log(DeviceMotionEvent.requestPermission);
-
-    // navigator.permissions.query({ name:' geolocation' }).then((result) => {
-    //     if (result.state === 'granted') {
-    //         showLocalNewsWithGeolocation();
-    //     } else if (result.state === 'prompt') {
-    //         showButtonToEnableLocalNews();
-    //     }
-    // });
-
-    navigator.permissions.query({ name: 'gyroscope' }).then((permissionStatus) => {
-        if(permissionStatus.state != 'granted'){
-            DeviceMotionEvent.requestPermission();
-            console.log("not granted");
-        }
-        console.log(`gyroscope permission state is ${permissionStatus.state}`);
-        // permissionStatus.onchange = () => {
-        //   console.log(`gyroscope permission status has changed to ${permissionStatus.state}`);
-        // };
-    });
-
-
-            // if(isIOS){
-            //     console.log("IOS");
-            //     DeviceMotionEvent.requestPermission()
-            //     .then(response => {
-            //         if(response == 'default') {
-            //             DeviceMotionEvent.requestPermission();
-            //         }
-            //     })
-            // }else{
-            //     console.log("not IOS");
-            // }
-
-    // window.addEventListener("load", function() {
-    //     if(isIOS){
-    //         DeviceMotionEvent.requestPermission();
-    //     }
-    // });
-
     ////////// FUNCTIONS
     //////
     ///
@@ -82,19 +41,19 @@ addEventListener('DOMContentLoaded', (event) => {
     }
 
     function tiltSwitch(){
-        // if(tiltCheckbox.checked){
-        //     profilCard.setAttribute("data-tilt-full-page-listening", "");
-        //     VanillaTilt.init(profilCard, {
-        //         max: 5,
-        //         glare: true,
-        //         "max-glare": .3,
-        //     });
+        if(tiltCheckbox.checked){
+            profilCard.setAttribute("data-tilt-full-page-listening", "");
+            VanillaTilt.init(profilCard, {
+                max: 5,
+                glare: true,
+                "max-glare": .3,
+            });
             
             if(isIOS){
                 DeviceMotionEvent.requestPermission();
             }
             // console.log("checkbox checked");
-        // }
+        }
         if(!tiltCheckbox.checked){
             profilCard.vanillaTilt.destroy();
             // console.log("should destroy");
