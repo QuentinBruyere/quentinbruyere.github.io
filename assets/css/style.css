@@ -141,6 +141,7 @@ body .profile-page .profile-section .profile-card .top-card .place .place-text {
 }
 body .profile-page .profile-section .profile-card .languages {
   transform: translateZ(32px);
+  width: 330px;
   border-radius: 12px;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.1);
@@ -148,7 +149,7 @@ body .profile-page .profile-section .profile-card .languages {
   margin-bottom: 2rem;
 }
 body .profile-page .profile-section .profile-card .languages h3 {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -157,11 +158,13 @@ body .profile-page .profile-section .profile-card .languages div {
 }
 body .profile-page .profile-section .profile-card .languages div h4 {
   margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 body .profile-page .profile-section .profile-card .languages div p {
   margin: 0 auto;
-  max-width: 300px;
+  max-width: 200px;
   font-size: 0.9rem;
+  font-weight: 300;
 }
 body .profile-page .profile-section .profile-card .social {
   display: flex;

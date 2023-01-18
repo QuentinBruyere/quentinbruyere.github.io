@@ -27,6 +27,7 @@ addEventListener('DOMContentLoaded', (event) => {
     window.addEventListener("resize", scalling);
     tiltCheckbox.addEventListener("click", tiltSwitch);
 
+    
     ////////// FUNCTIONS
     //////
     ///
@@ -54,8 +55,6 @@ addEventListener('DOMContentLoaded', (event) => {
         let scale = window.innerHeight/(profilCardHeight + 100);
 
         profilSection.style.setProperty("transform", `scale(${scale})`);
-
-        // console.log("page scaled");
     }
 
     function tiltSwitch(){
@@ -70,11 +69,9 @@ addEventListener('DOMContentLoaded', (event) => {
             if(isIOS){
                 DeviceMotionEvent.requestPermission();
             }
-            // console.log("checkbox checked");
         }
         if(!tiltCheckbox.checked){
             profilCard.vanillaTilt.destroy();
-            // console.log("should destroy");
         }
     }
 

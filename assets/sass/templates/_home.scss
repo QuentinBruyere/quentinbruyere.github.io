@@ -167,6 +167,7 @@ body {
                 .languages {
                     transform: translateZ($parallax1 + 5);
 
+                    width: 330px;
                     border-radius: 12px;
                     padding: 1rem;
                     background-color: rgba(255, 255, 255, .1);
@@ -174,21 +175,28 @@ body {
                     margin-bottom: 2rem;
 
                     h3 {
-                        font-size: 1.15rem;
+                        font-size: 1.25rem;
                         font-weight: 600;
                         margin-bottom: 1rem;
                     }
 
                     div {
                         margin-bottom: 1rem;
+                        // display: flex;
+                        // flex-flow: column nowrap;
+                        // align-items: center;
 
                         h4 {
                             margin-bottom: .5rem;
+                            font-weight: 500;
+                            // border-bottom: 1px solid rgb(0 0 0 / 20%);
+                            // width: fit-content;
                         }
                         p {
                             margin: 0 auto;
-                            max-width: 300px;
+                            max-width: 200px;
                             font-size: .9rem;
+                            font-weight: 300;
                         }
                     }
                 }
