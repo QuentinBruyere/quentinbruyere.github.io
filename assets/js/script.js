@@ -37,6 +37,18 @@ addEventListener('DOMContentLoaded', (event) => {
         iosInit();
     }
 
+    function isMobile(){
+        // Smaller device means smaller perspective
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            // true for mobile device
+            profilCard.setAttribute("data-tilt-perspective", "200");
+            tiltButton.style.setProperty("transform", "translateZ(12px)");
+            topCard.style.setProperty("transform", "translateZ(7px)");
+            languages.style.setProperty("transform", "translateZ(12px)");
+            social.style.setProperty("transform", "translateZ(7px)");
+        }
+    }
+
     function scalling(){
         let profilCardHeight = profilCard.offsetHeight;
         let scale = window.innerHeight/(profilCardHeight + 100);
@@ -53,6 +65,7 @@ addEventListener('DOMContentLoaded', (event) => {
                 max: 5,
                 glare: true,
                 "max-glare": .3,
+                reverse: true,
             });
             
             if(isIOS){
@@ -71,21 +84,4 @@ addEventListener('DOMContentLoaded', (event) => {
             tiltCheckbox.removeAttribute("checked");
         }
     }
-
-
-    ////////// MOBILE TRANSLATE
-    ////// Smaller device means smaller perspective
-    ////
-
-    function isMobile(){
-        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-            // true for mobile device
-            profilCard.setAttribute("data-tilt-perspective", "200");
-            tiltButton.style.setProperty("transform", "translateZ(12px)");
-            topCard.style.setProperty("transform", "translateZ(7px)");
-            languages.style.setProperty("transform", "translateZ(12px)");
-            social.style.setProperty("transform", "translateZ(7px)");
-        }
-    }
-
 });
