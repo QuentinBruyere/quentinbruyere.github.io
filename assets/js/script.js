@@ -31,9 +31,9 @@ addEventListener('DOMContentLoaded', (event) => {
     //////
     ///
     function init() {
+        iosInit();
         scalling();
         tiltSwitch();
-        iosInit();
     }
 
     function scalling(){
