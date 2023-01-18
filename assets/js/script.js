@@ -65,7 +65,6 @@ addEventListener('DOMContentLoaded', (event) => {
                 max: 5,
                 glare: true,
                 "max-glare": .3,
-                reverse: true,
             });
             
             if(isIOS){
