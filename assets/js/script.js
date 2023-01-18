@@ -31,9 +31,10 @@ addEventListener('DOMContentLoaded', (event) => {
     //////
     ///
     function init() {
-        iosInit();
+        isMobile();
         scalling();
         tiltSwitch();
+        iosInit();
     }
 
     function scalling(){
@@ -75,13 +76,16 @@ addEventListener('DOMContentLoaded', (event) => {
     ////////// MOBILE TRANSLATE
     ////// Smaller device means smaller perspective
     ////
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-        // true for mobile device
-        profilCard.setAttribute("data-tilt-perspective", "200");
-        tiltButton.style.setProperty("transform", "translateZ(12px)");
-        topCard.style.setProperty("transform", "translateZ(7px)");
-        languages.style.setProperty("transform", "translateZ(12px)");
-        social.style.setProperty("transform", "translateZ(7px)");
+
+    function isMobile(){
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            // true for mobile device
+            profilCard.setAttribute("data-tilt-perspective", "200");
+            tiltButton.style.setProperty("transform", "translateZ(12px)");
+            topCard.style.setProperty("transform", "translateZ(7px)");
+            languages.style.setProperty("transform", "translateZ(12px)");
+            social.style.setProperty("transform", "translateZ(7px)");
+        }
     }
 
 });
