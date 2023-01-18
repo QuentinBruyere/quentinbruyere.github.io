@@ -28,17 +28,40 @@ addEventListener('DOMContentLoaded', (event) => {
     window.addEventListener("resize", scalling);
     tiltCheckbox.addEventListener("click", tiltSwitch);
 
-    if(isIOS){
-        console.log("IOS");
-        DeviceMotionEvent.requestPermission()
-        .then(response => {
-            if(response == 'default') {
-                DeviceMotionEvent.requestPermission();
-            }
-        })
-    }else{
-        console.log("not IOS");
-    }
+    // console.log(navigator.permissions.query({ name:'geolocation' }));
+    // console.log(DeviceMotionEvent.requestPermission);
+
+    // navigator.permissions.query({ name:' geolocation' }).then((result) => {
+    //     if (result.state === 'granted') {
+    //         showLocalNewsWithGeolocation();
+    //     } else if (result.state === 'prompt') {
+    //         showButtonToEnableLocalNews();
+    //     }
+    // });
+
+    navigator.permissions.query({ name: 'gyroscope' }).then((permissionStatus) => {
+        if(permissionStatus.state != 'granted'){
+            DeviceMotionEvent.requestPermission();
+            console.log("not granted");
+        }
+        console.log(`gyroscope permission state is ${permissionStatus.state}`);
+        // permissionStatus.onchange = () => {
+        //   console.log(`gyroscope permission status has changed to ${permissionStatus.state}`);
+        // };
+    });
+
+
+            // if(isIOS){
+            //     console.log("IOS");
+            //     DeviceMotionEvent.requestPermission()
+            //     .then(response => {
+            //         if(response == 'default') {
+            //             DeviceMotionEvent.requestPermission();
+            //         }
+            //     })
+            // }else{
+            //     console.log("not IOS");
+            // }
 
     // window.addEventListener("load", function() {
     //     if(isIOS){
