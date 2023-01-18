@@ -18,8 +18,7 @@ addEventListener('DOMContentLoaded', (event) => {
     ////////// INITIALISATION
     //////
     ///
-    scalling();
-    tiltSwitch();
+    init();
 
 
     ////////// EVENT-LISTENERS
@@ -31,6 +30,12 @@ addEventListener('DOMContentLoaded', (event) => {
     ////////// FUNCTIONS
     //////
     ///
+    function init() {
+        scalling();
+        tiltSwitch();
+        iosInit();
+    }
+
     function scalling(){
         let profilCardHeight = profilCard.offsetHeight;
         let scale = window.innerHeight/(profilCardHeight + 100);
@@ -57,6 +62,12 @@ addEventListener('DOMContentLoaded', (event) => {
         if(!tiltCheckbox.checked){
             profilCard.vanillaTilt.destroy();
             // console.log("should destroy");
+        }
+    }
+
+    function iosInit() {
+        if(isIOS){
+            tiltCheckbox.removeAttribute("checked");
         }
     }
 
