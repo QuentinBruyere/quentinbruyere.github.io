@@ -28,6 +28,11 @@ addEventListener('DOMContentLoaded', (event) => {
     window.addEventListener("resize", scalling);
     tiltCheckbox.addEventListener("click", tiltSwitch);
 
+    window.addEventListener("load", function() {
+        if(isIOS){
+            DeviceMotionEvent.requestPermission();
+        }
+    });
 
     ////////// FUNCTIONS
     //////
